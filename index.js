@@ -54,7 +54,7 @@ app.post('/', express.urlencoded({ extended: true }), (req, res) => {
             '--config', 'video=false,screenshotOnRunFailure=false',
         ]
     )
-    res.write(`Testing: ${req.body.test_url} \n`)
+    res.write(`Testing: ${req.body.testnod_url} \n`)
     child.stdout.setEncoding('utf-8')
         .pipe(createTransformer())
         .pipe(res)
@@ -64,7 +64,7 @@ app.post('/', express.urlencoded({ extended: true }), (req, res) => {
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-    port = 80;
+    port = 8000;
 }
 
 app.listen(port, () => {
