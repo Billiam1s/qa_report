@@ -2,7 +2,7 @@
   "name": "qa_report",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node ./node_modules/pm2/bin/pm2 start ./server.js --name qa_report --log ../logs/app.log ",
     "stop": "node ./node_modules/pm2/bin/pm2 stop qa_report",
